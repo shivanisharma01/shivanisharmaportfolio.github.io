@@ -1418,80 +1418,75 @@ input, select, textarea {
 
 /* Gallery */
 
-	.gallery {
-	display: grid;
+	/* Gallery Styling */
+.gallery {
+    display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns */
     gap: 20px; /* Spacing between projects */
     padding: 20px;
-    justify-items: center; /* Centers content within grid cells */
-	}
-	
+    justify-items: center; /* Centers content horizontally */
+    align-items: start; /* Aligns items at the top of each row */
+}
 
-		.gallery article {
-			text-align: center;
-    		background-color: #f9f9f9; /* Light background for better visibility */
-    		border-radius: 8px;
-   			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    		padding: 10px;
-    		transition: transform 0.3s ease;
-			
-		}
+/* Article Styling */
+.gallery article {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
 
-		.gallery article:hover {
-			transform: translateY(-5px);
-    		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-		}
+.gallery article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
 
-		.gallery article img {
-			max-width: 400px;
-    		height: auto;
-    		border-radius: 5px;
-		}
+.gallery article h1 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
 
-		.gallery article h1 {
-			font-size: 1rem;
-			margin: 10px 0;
-			color: #333;
-		}
+.gallery article button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-		.gallery article button {
-			margin-top: 10px;
-			padding: 8px 16px;
-			font-size: 0.9rem;
-			font-weight: bold;
-			color: #fff;
-			background-color: #007bff;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			transition: background-color 0.3s ease;
-		}
+.gallery article button:hover {
+    background-color: #0056b3;
+}
 
-		.gallery article button:hover {
-			background-color: #0056b3;
-		}
-		
-		.gallery article hr {
-			margin: 15px 0;
-			border: none;
-			height: 1px;
-			background-color: #ddd;
-			width: 90%;
-		}
+.gallery article hr {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    width: 90%;
+}
 
-		@media (max-width: 992px) {
-			.gallery {
-				grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-			}
-		}
-		
-		@media (max-width: 576px) {
-			.gallery {
-				grid-template-columns: 1fr; /* One column on small screens */
-			}
-		}
-		
-		
+/* Responsive Design */
+@media (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
+}
 		
 		.gallery button{
 			background-color: rgba(255, 255, 255, 0.651);
