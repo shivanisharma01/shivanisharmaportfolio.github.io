@@ -1421,11 +1421,13 @@ input, select, textarea {
 
 	.gallery {
     	display: grid;
-    	grid-template-columns: repeat(3, 1fr); /* Three columns */
-    	gap: 20px; /* Spacing between projects */
-    	padding: 20px;
-    	justify-items: center; /* Centers content horizontally */
-    	align-items: stretch; /* Ensures all cards are the same height */
+		grid-template-columns: repeat(4, 1fr); /* Four columns */
+		gap: 20px; /* Spacing between projects */
+		padding: 20px;
+		justify-items: center; /* Centers content horizontally */
+		align-items: stretch; /* Ensures all cards are the same height */
+		max-width: 1600px; /* Wider section for projects */
+		margin: 0 auto;
 	}
 
 /* Article Styling */
@@ -1465,25 +1467,25 @@ input, select, textarea {
 		font-size: 1rem;
 		margin: 10px 0;
 		color: #333;
-		flex-grow: 1; /* Makes the heading fill available space */
+		flex-grow: 1; /* Ensures headings occupy consistent vertical space */
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
 	}
 
 /* Button Styling */
 	.gallery article button {
 		margin-top: 10px;
-		padding: 8px 16px;
-		font-size: 0.9rem;
-		font-weight: bold;
-		color: #fff;
-		background-color: #007bff;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
-		transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
 	}
 
 	.gallery article button:hover {
@@ -1501,15 +1503,21 @@ input, select, textarea {
 	}
 
 /* Responsive Design */
-	@media (max-width: 992px) {
+	@media (max-width: 1200px) {
 		.gallery {
-			grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+			grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+		}
+	}
+
+	@media (max-width: 768px) {
+		.gallery {
+			grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
 		}
 	}
 
 	@media (max-width: 576px) {
 		.gallery {
-			grid-template-columns: 1fr; /* One column on small screens */
+			grid-template-columns: 1fr; /* One column on extra small screens */
 		}
 	}
 		.gallery button{
