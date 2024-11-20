@@ -2358,6 +2358,7 @@ input, select, textarea {
 /* Contact */
 
 	#contact {
+		background: url("images/overlay.png"), url("../../images/two.jpg");
 		overflow: hidden;
 		padding-bottom: 0;
 	}
