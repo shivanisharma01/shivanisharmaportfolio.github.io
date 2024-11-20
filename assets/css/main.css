@@ -1426,7 +1426,7 @@ input, select, textarea {
 			padding: 20px;
 			justify-items: stretch; /* Ensure all cards stretch to fill available space */
 			align-items: stretch; /* Uniform height for cards */
-			background-color: #2f3136; /* Dark background for the gallery */
+			background-color: #686b73; /* Dark background for the gallery */
 		}
 
 		/* Card Styling */
@@ -1478,11 +1478,11 @@ input, select, textarea {
 		/* Button Styling */
 		.gallery article button {
 			margin-top: 10px;
-			padding: 12px 24px;
-			font-size: 1rem;
+			padding: 10px 20px; /* Adjusted padding for smaller text */
+			font-size: 0.85rem; /* Reduced font size */
 			font-weight: bold;
 			color: #ffffff; /* White text */
-			background-color: #ff7f50; /* Coral shade for buttons */
+			background-color: #a3d5fc; /* Light blue shade for buttons */
 			border: none;
 			border-radius: 8px;
 			cursor: pointer;
