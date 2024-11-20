@@ -1417,108 +1417,105 @@ input, select, textarea {
 		}
 
 		
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Background color for the entire page */
-    margin: 0;
-    padding: 0;
-}
 
-/* Gallery Container */
-/* Gallery Styling */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 20px; /* Spacing between projects */
-    padding: 20px;
-    justify-items: center; /* Centers content horizontally */
-    align-items: stretch; /* Ensures all cards are the same height */
-}
-
-/* Article Styling */
-.gallery article {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: space-between; /* Distribute space evenly between elements */
-    text-align: center;
-    background-color: transparent; /* Remove white background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Ensures consistent height */
-}
-
-.gallery article:hover {
-    transform: translateY(-5px); /* Slight upward movement */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow effect */
-}
-
-/* Image Styling */
-.gallery article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s ease; /* Smooth scaling */
-}
-
-.gallery article img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Heading Styling */
-.gallery article h1 {
-    font-size: 1rem;
-    margin: 10px 0;
-    color: #333;
-    flex-grow: 1; /* Ensures headings occupy consistent vertical space */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Button Styling */
-.gallery article button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: center; /* Centers the button horizontally */
-}
-
-.gallery article button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: scale(1.05); /* Slight button enlargement */
-}
-
-/* Horizontal Rule Styling */
-.gallery article hr {
-    margin: 15px 0;
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    width: 90%;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .gallery {
-        grid-template-columns: 1fr; /* One column on small screens */
-    }
-}
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive column sizing */
+			gap: 20px; /* Spacing between cards */
+			padding: 20px;
+			justify-items: stretch; /* Ensure cards stretch to fill available space */
+			align-items: stretch; /* Uniform height for all cards */
+			background-color: #f8f9fa; /* Subtle background color for the gallery */
+		}
+		
+		/* Article Styling */
+		.gallery article {
+			display: flex;
+			flex-direction: column; /* Align items vertically */
+			justify-content: space-between; /* Space evenly within the card */
+			text-align: center;
+			background-color: #ffffff; /* Subtle card background */
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			padding: 15px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			height: 100%; /* Ensure consistent card height */
+		}
+		
+		/* Hover effect for cards */
+		.gallery article:hover {
+			transform: translateY(-5px); /* Slight upward hover effect */
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+		}
+		
+		/* Image Styling */
+		.gallery article img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 5px;
+			transition: transform 0.3s ease; /* Smooth zoom effect */
+			object-fit: cover; /* Ensures images are consistently cropped */
+		}
+		
+		/* Hover effect for images */
+		.gallery article img:hover {
+			transform: scale(1.05); /* Slight zoom on hover */
+		}
+		
+		/* Heading Styling */
+		.gallery article h1 {
+			font-size: 1.2rem; /* Slightly larger font for readability */
+			margin: 10px 0;
+			color: #333;
+			flex-grow: 1; /* Ensure headings occupy consistent vertical space */
+			display: flex;
+			align-items: center;
+			justify-content: center; /* Center-align the heading */
+			word-wrap: break-word; /* Prevent long titles from breaking layout */
+		}
+		
+		/* Button Styling */
+		.gallery article button {
+			margin-top: 10px;
+			padding: 10px 20px;
+			font-size: 0.9rem;
+			font-weight: bold;
+			color: #fff;
+			background-color: #007bff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease, transform 0.2s ease;
+			align-self: center; /* Center-align the button */
+		}
+		
+		/* Hover effect for buttons */
+		.gallery article button:hover {
+			background-color: #0056b3; /* Darker blue on hover */
+			transform: scale(1.05); /* Slight enlargement */
+		}
+		
+		/* Horizontal Rule Styling */
+		.gallery article hr {
+			margin: 15px 0;
+			border: none;
+			height: 1px;
+			background-color: #ddd;
+			width: 90%;
+		}
+		
+		/* Responsive Design */
+		@media (max-width: 992px) {
+			.gallery {
+				grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+			}
+		}
+		
+		@media (max-width: 576px) {
+			.gallery {
+				grid-template-columns: 1fr; /* One column on small screens */
+			}
+		}
 	
 		.gallery button{
 			background-color: rgba(255, 255, 255, 0.651);
