@@ -1452,11 +1452,12 @@ input, select, textarea {
 
 		/* Image Styling */
 		.gallery article img {
-			max-width: 100%;
-			height: 180px; /* Fixed image height */
-			border-radius: 8px;
-			object-fit: cover; /* Maintain aspect ratio and crop if needed */
-			transition: transform 0.3s ease;
+			width: 100%; /* Ensure the image takes the full width of its container */
+			height: 180px; /* Fixed height for consistent sizing */
+			object-fit: cover; /* Crop images to fit within the specified height and width */
+			border-radius: 8px; /* Keep rounded corners */
+			transition: transform 0.3s ease; /* Smooth scaling on hover */
+			margin-bottom: 10px; /* Space below the image */
 		}
 
 		/* Image Hover Effect */
@@ -1491,7 +1492,7 @@ input, select, textarea {
 
 		/* Button Hover Effect */
 		.gallery article button:hover {
-			background-color: #e76e4f; /* Darker coral shade on hover */
+			background-color: #a3d5fc; /* Darker coral shade on hover */
 			transform: scale(1.05); /* Slight enlargement */
 		}
 
