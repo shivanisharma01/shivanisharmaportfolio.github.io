@@ -1425,7 +1425,7 @@ input, select, textarea {
 			padding: 20px;
 			justify-items: stretch; /* Ensure all cards stretch to fill available space */
 			align-items: stretch; /* Uniform height for cards */
-			background-color: #95979e; /* Dark background for the gallery */
+			background-color: #b2b3b8; /* Dark background for the gallery */
 		}
 
 		/* Card Styling */
@@ -1437,7 +1437,7 @@ input, select, textarea {
 			text-align: center;
 			background-color: rgba(255, 255, 255, 0.05); /* Light transparent background to blend with gallery */
 			border-radius: 10px; /* Rounded corners */
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+			box-shadow: 0 4px 6px rgba(97, 96, 96, 0.2); /* Subtle shadow for depth */
 			padding: 20px;
 			height: 350px; /* Fixed height for consistency */
 			transition: transform 0.3s ease, box-shadow 0.3s ease;
