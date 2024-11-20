@@ -1423,55 +1423,53 @@ input, select, textarea {
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive column sizing */
 			gap: 20px; /* Spacing between cards */
 			padding: 20px;
-			justify-items: stretch; /* Ensure cards stretch to fill available space */
-			align-items: stretch; /* Uniform height for all cards */
-			background-color: #f8f9fa; /* Subtle background color for the gallery */
-		}
+			justify-items: center; /* Center the cards horizontally */
+			align-items: stretch; /* Ensure cards stretch to fill available space */
+			background-color: #2f3136; /* Dark background color for contrast */
+		}				
 		
 		/* Article Styling */
 		.gallery article {
 			display: flex;
 			flex-direction: column; /* Align items vertically */
 			justify-content: space-between; /* Space evenly within the card */
+			align-items: center; /* Center-align all content */
 			text-align: center;
-			background-color: #ffffff; /* Subtle card background */
+			background-color: rgba(255, 255, 255, 0.1); /* Lighter shade of background with transparency */
 			border-radius: 8px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 			padding: 15px;
+			height: 400px; /* Fixed height for consistent card size */
+			width: 100%; /* Ensure cards take the full width of their grid column */
 			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			height: 100%; /* Ensure consistent card height */
 		}
 		
 		/* Hover effect for cards */
 		.gallery article:hover {
 			transform: translateY(-5px); /* Slight upward hover effect */
-			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
 		}
 		
 		/* Image Styling */
 		.gallery article img {
 			max-width: 100%;
-			height: auto;
+			height: 150px; /* Fixed height for images */
 			border-radius: 5px;
 			transition: transform 0.3s ease; /* Smooth zoom effect */
 			object-fit: cover; /* Ensures images are consistently cropped */
-		}
-		
-		/* Hover effect for images */
-		.gallery article img:hover {
-			transform: scale(1.05); /* Slight zoom on hover */
+			margin-bottom: 10px; /* Space below the image */
 		}
 		
 		/* Heading Styling */
 		.gallery article h1 {
 			font-size: 1.2rem; /* Slightly larger font for readability */
 			margin: 10px 0;
-			color: #333;
+			color: #ffffff; /* White text for contrast */
 			flex-grow: 1; /* Ensure headings occupy consistent vertical space */
+			word-wrap: break-word; /* Prevent long titles from breaking layout */
 			display: flex;
 			align-items: center;
 			justify-content: center; /* Center-align the heading */
-			word-wrap: break-word; /* Prevent long titles from breaking layout */
 		}
 		
 		/* Button Styling */
@@ -1480,18 +1478,17 @@ input, select, textarea {
 			padding: 10px 20px;
 			font-size: 0.9rem;
 			font-weight: bold;
-			color: #fff;
-			background-color: #007bff;
+			color: #ffffff; /* White text */
+			background-color: #ff6f61; /* Appealing coral color */
 			border: none;
 			border-radius: 5px;
 			cursor: pointer;
 			transition: background-color 0.3s ease, transform 0.2s ease;
-			align-self: center; /* Center-align the button */
 		}
 		
 		/* Hover effect for buttons */
 		.gallery article button:hover {
-			background-color: #0056b3; /* Darker blue on hover */
+			background-color: #e65c50; /* Slightly darker coral on hover */
 			transform: scale(1.05); /* Slight enlargement */
 		}
 		
@@ -1500,7 +1497,7 @@ input, select, textarea {
 			margin: 15px 0;
 			border: none;
 			height: 1px;
-			background-color: #ddd;
+			background-color: rgba(255, 255, 255, 0.2); /* Subtle white line */
 			width: 90%;
 		}
 		
