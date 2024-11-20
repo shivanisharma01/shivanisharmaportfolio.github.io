@@ -1416,117 +1416,115 @@ input, select, textarea {
 
 		}
 
+			
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr); /* Four columns */
+			gap: 30px; /* Spacing between projects */
+			padding: 30px; /* Increased padding around the gallery */
+			justify-items: center; /* Centers content horizontally */
+			align-items: stretch; /* Ensures all cards are the same height */
+			max-width: 1800px; /* Wider section for projects */
+			margin: 0 auto;
+		}
+
+		/* Article Styling */
+		.gallery article {
+			display: flex;
+			flex-direction: column; /* Align items vertically */
+			justify-content: space-between; /* Evenly space elements */
+			align-items: center; /* Centers all elements horizontally */
+			text-align: center;
+			background-color: transparent; /* Remove white background */
+			border-radius: 10px; /* Smooth corners */
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+			padding: 20px; /* Increased padding */
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			height: 400px; /* Fixed uniform card height */
+			width: 300px; /* Fixed uniform card width */	
+		}
+
+		/* Hover Effect for Cards */
+		.gallery article:hover {
+			transform: translateY(-8px); /* Slight upward movement */
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+		}
+
+		/* Image Styling */
+		.gallery article img {
+			width: 100%; /* Full width for scaling */
+			height: 160px; /* Fixed height for all images */
+			object-fit: cover; /* Ensures consistent aspect ratio */
+			border-radius: 5px; /* Smooth corners */
+			transition: transform 0.3s ease; /* Smooth hover effect */
+			flex-shrink: 0; 
+		}
+
+		.gallery article img:hover {
+			transform: scale(1.05); /* Slight zoom on hover */
+		}
+
+		/* Heading Styling */
+		.gallery article h1 {
+			font-size: 1.1rem; /* Larger font for headings */
+			margin: 15px 0;
+			color: #333;
+			text-align: center;
+			line-height: 1.4; /* Better readability for longer titles */
+			height: 50px; /* Fixed height to align across all cards */
+			overflow: hidden; /* Prevents overflow for long text */
+			display: flex;
+			align-items: center; /* Vertically centers heading text */
+			justify-content: center; /* Prevents overflow for long text */
+		}
+
+		/* Button Styling */
+		.gallery article button {
+			margin-top: 10px;
+			padding: 12px 20px; /* Larger button size */
+			font-size: 1rem; /* Increased font size */
+			font-weight: bold;
+			color: #fff;
+			background-color: #007bff;
+			border: none;
+			border-radius: 6px; /* Smooth corners */
+			cursor: pointer;
+			transition: background-color 0.3s ease, transform 0.2s ease;
+			align-self: center;  /* Centers the button horizontally */
+		}
+
+		.gallery article button:hover {
+			background-color: #0056b3; /* Darker blue on hover */
+			transform: scale(1.1); /* Slight enlargement */
+		}
+
+		/* Horizontal Rule Styling */
+		.gallery article hr {
+			margin: 15px 0;
+			border: none;
+			height: 1px;
+			background-color: #ddd;
+			width: 90%;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 1200px) {
+			.gallery {
+				grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+			}
+		}
 		
-/* Gallery Styling */
-		/* Gallery Styling */
-		/* Gallery Styling */
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr); /* Four columns */
-		gap: 30px; /* Spacing between projects */
-		padding: 30px; /* Increased padding around the gallery */
-		justify-items: center; /* Centers content horizontally */
-		align-items: stretch; /* Ensures all cards are the same height */
-		max-width: 1800px; /* Wider section for projects */
-		margin: 0 auto; /* Centers the section on the page */
-	}
-
-	/* Article Styling */
-	.gallery article {
-		display: flex;
-		flex-direction: column; /* Align items vertically */
-		justify-content: space-between; /* Evenly space elements */
-		align-items: center; /* Centers all elements horizontally */
-		text-align: center;
-		background-color: transparent; /* Remove white background */
-		border-radius: 10px; /* Smooth corners */
-		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
-		padding: 20px; /* Increased padding */
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		height: 400px; /* Ensures uniform card height */
-		width: 300px; /* Consistent card width */
-	}
-
-	/* Hover Effect for Cards */
-	.gallery article:hover {
-		transform: translateY(-8px); /* Slight upward movement */
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-	}
-
-	/* Image Styling */
-	.gallery article img {
-		width: 100%; /* Full width for scaling */
-		height: 150px; /* Fixed height for all images */
-		object-fit: cover; /* Ensures consistent aspect ratio */
-		border-radius: 5px; /* Smooth corners */
-		transition: transform 0.3s ease; /* Smooth hover effect */
-	}
-
-	.gallery article img:hover {
-		transform: scale(1.05); /* Slight zoom on hover */
-	}
-
-	/* Heading Styling */
-	.gallery article h1 {
-		font-size: 1.2rem; /* Larger font for headings */
-		margin: 10px 0;
-		color: #333;
-		flex-grow: 1; /* Fills available vertical space */
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		height: 50px; /* Uniform height for headings */
-		overflow: hidden; /* Prevents overflow for long text */
-	}
-
-	/* Button Styling */
-	.gallery article button {
-		margin-top: 15px;
-		padding: 12px 20px; /* Larger button size */
-		font-size: 1rem; /* Increased font size */
-		font-weight: bold;
-		color: #fff;
-		background-color: #007bff;
-		border: none;
-		border-radius: 6px; /* Smooth corners */
-		cursor: pointer;
-		transition: background-color 0.3s ease, transform 0.2s ease;
-		align-self: center; /* Centers the button horizontally */
-	}
-
-	.gallery article button:hover {
-		background-color: #0056b3; /* Darker blue on hover */
-		transform: scale(1.1); /* Slight enlargement */
-	}
-
-	/* Horizontal Rule Styling */
-	.gallery article hr {
-		margin: 15px 0;
-		border: none;
-		height: 1px;
-		background-color: #ddd;
-		width: 90%;
-	}
-
-	/* Responsive Design */
-	@media (max-width: 1200px) {
-		.gallery {
-			grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+		@media (max-width: 768px) {
+			.gallery {
+				grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+			}
 		}
-	}
-
-	@media (max-width: 768px) {
-		.gallery {
-			grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+		
+		@media (max-width: 576px) {
+			.gallery {
+				grid-template-columns: 1fr; /* One column on extra small screens */
+			}
 		}
-	}
-
-	@media (max-width: 576px) {
-		.gallery {
-			grid-template-columns: 1fr; /* One column on extra small screens */
-		}
-	}
 		.gallery button{
 			background-color: rgba(255, 255, 255, 0.651);
 			border: 1px solid #01010100;
